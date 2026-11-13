@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hürdoğan Craft | Handmade Paracord Gear</title>
     <style>
-        /* GENEL ARKA PLAN: Manzara her yerde aktif ve hafif karartılmış */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* =========================================
+           1. PC GÖRÜNÜMÜ (769px ve üzeri ekranlar)
+           ========================================= */
         body {
             font-family: Arial, sans-serif;
             background-color: #1a1a1a;
@@ -14,8 +22,6 @@
             background-position: center center;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            margin: 0;
-            padding: 0;
             color: #333;
             text-align: center;
             min-height: 100vh;
@@ -23,10 +29,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            box-sizing: border-box;
         }
 
-        /* Arka planın üzerine genel hafif karartma */
         body::before {
             content: "";
             position: fixed;
@@ -38,18 +42,16 @@
             z-index: -1;
         }
 
-        /* KART: Arka planı kesinlikle yarı şeffaf yaptık ki manzara içinden süzülsün */
-        .container {
+        .pc-container {
             width: 100%;
             max-width: 480px;
             margin: 20px;
-            background: rgba(255, 255, 255, 0.82) !important; /* Katı beyazlığı kırdık, arkadaki manzara içeri sızacak */
+            background: rgba(255, 255, 255, 0.82);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
             padding: 35px 25px;
             border-radius: 20px;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-            box-sizing: border-box;
         }
 
         .logo {
@@ -72,9 +74,10 @@
 
         .section-desc {
             font-size: 13px;
-            color: #444;
+            color: #333;
             margin-bottom: 25px;
             line-height: 1.5;
+            font-weight: 500;
         }
 
         .btn-group {
@@ -92,7 +95,7 @@
         .btn {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             padding: 15px 20px;
             border-radius: 12px;
             font-weight: bold;
@@ -111,38 +114,83 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            margin: 0 auto;
         }
 
         .btn-shopier { background-color: #007bff; }
         .btn-dolap { background-color: #00b259; }
         .btn-gardrops { background-color: #a81c3e; }
-        
+
         .note {
             font-size: 11px;
-            color: #444;
+            color: #333;
             margin-top: 5px;
             font-style: italic;
+            font-weight: 600;
         }
 
-        @media (max-width: 480px) {
-            .container {
-                margin: 12px;
-                padding: 25px 18px;
+        .mobile-wrapper {
+            display: none;
+        }
+
+        /* =========================================
+           2. MOBİL GÖRÜNÜMÜ (768px ve altı ekranlar)
+           ========================================= */
+        @media (max-width: 768px) {
+            body {
+                background-image: none;
+                background-color: #1a1a1a;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
             }
+
+            body::before {
+                display: none;
+            }
+
+            .pc-container {
+                display: none;
+            }
+
+            /* Mobilde doğrudan mobilgoruntu.jpg görünür */
+            .mobile-wrapper {
+                display: block;
+                position: relative;
+                width: 100%;
+                max-width: 500px;
+            }
+
+            .mobile-bg-img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            /* Görsel üzerindeki buton alanlarına denk gelen tıklanabilir linkler */
+            .mob-link {
+                position: absolute;
+                left: 11%;
+                width: 78%;
+                height: 7.5%;
+                z-index: 10;
+            }
+            .mob-shopier  { top: 53.5%; }
+            .mob-dolap    { top: 64.5%; }
+            .mob-gardrops { top: 75.5%; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Logo (hurdogancraft_logo.jpeg) -->
-        <img src="hurdogancraft_logo.jpeg" alt="Hürdoğan Craft Logo" class="logo">
+
+    <!-- PC EKRANI -->
+    <div class="pc-container">
+        <img src="hurdogancraft_logo.jpeg" alt="Hürdoğan Craft Logo" class="logo"[cite: 9]>
         
         <div class="section-title">SATIŞ PLATFORMLARIMIZ</div>
         <div class="section-desc">El yapımı paracord ürünlerimizi aşağıdaki güvenilir mağazalardan güvenle satın alabilirsiniz.</div>
 
         <div class="btn-group">
-            <!-- Shopier -->
             <a href="https://www.shopier.com/hurdogancraft" class="btn-box" target="_blank">
                 <div class="btn btn-shopier">
                     <div class="btn-content">
@@ -153,7 +201,6 @@
                 <div class="note">*Tarayıcıdan anında açılır, uygulama gerektirmez*</div>
             </a>
 
-            <!-- Dolap -->
             <a href="https://dolap.com/profil/hurdogancraft" class="btn-box" target="_blank">
                 <div class="btn btn-dolap">
                     <div class="btn-content">
@@ -164,7 +211,6 @@
                 <div class="note">*Dolap uygulamanız varsa buradan alışveriş yapabilirsiniz*</div>
             </a>
 
-            <!-- Gardrops -->
             <a href="https://www.gardrops.com/hurdogancraft" class="btn-box" target="_blank">
                 <div class="btn btn-gardrops">
                     <div class="btn-content">
@@ -176,5 +222,14 @@
             </a>
         </div>
     </div>
+
+    <!-- MOBİL EKRANI -->
+    <div class="mobile-wrapper">
+        <img src="mobilgoruntu.jpg" alt="Hürdoğan Craft Satış Platformlarımız" class="mobile-bg-img"[cite: 9]>
+        <a href="https://www.shopier.com/hurdogancraft" class="mob-link mob-shopier" target="_blank" aria-label="Shopier Mağazamız"></a>
+        <a href="https://dolap.com/profil/hurdogancraft" class="mob-link mob-dolap" target="_blank" aria-label="Dolap Mağazamız"></a>
+        <a href="https://www.gardrops.com/hurdogancraft" class="mob-link mob-gardrops" target="_blank" aria-label="Gardrops Mağazamız"></a>
+    </div>
+
 </body>
 </html>
