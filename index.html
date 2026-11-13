@@ -7,7 +7,6 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            /* Bilgisayarda ve telefonda arka planı şık bir tonla kaplıyoruz, sağda solda boşluk kalmıyor */
             background: linear-gradient(rgba(240, 240, 245, 0.92), rgba(240, 240, 245, 0.92)), url('arka-plan.jpg');
             background-size: cover;
             background-position: center;
@@ -31,7 +30,6 @@
             background: #ffffff;
             padding: 30px 24px;
             border-radius: 16px;
-            /* Bilgisayarda sırıtmaması için modern, hafif bir gölge ve şık çerçeve ekledik */
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
             box-sizing: border-box;
         }
@@ -41,7 +39,6 @@
             display: block;
             margin: 0 auto 20px auto;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
         }
         .section-title {
             font-size: 18px;
@@ -67,7 +64,10 @@
             text-decoration: none;
         }
         .btn {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
             padding: 14px 20px;
             border-radius: 8px;
             font-weight: bold;
@@ -80,6 +80,17 @@
             opacity: 0.92;
             transform: translateY(-2px);
         }
+        /* Butonların soluna yerleştirilen logolar için stil */
+        .btn img.platform-logo {
+            position: absolute;
+            left: 16px;
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            background: white;
+            border-radius: 50%;
+            padding: 2px;
+        }
         .btn-shopier { background-color: #007bff; }
         .btn-dolap { background-color: #00b259; }
         .btn-gardrops { background-color: #a81c3e; }
@@ -91,11 +102,10 @@
             font-style: italic;
         }
 
-        /* Telefonda (mobilde) kenar boşluklarını sıfırlayıp tam ekran oturmasını sağlayan özel ayar */
         @media (max-width: 480px) {
             body {
                 justify-content: flex-start;
-                background: #ffffff; /* Mobilde direkt arka plan rengiyle tam oturur */
+                background: #ffffff;
             }
             .container {
                 max-width: 100%;
@@ -113,7 +123,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- Logon yerinde duruyor -->
         <img src="arka-plan.jpg" alt="Hürdoğan Craft Logo" class="logo">
         
         <div class="section-title">SATIŞ PLATFORMLARIMIZ</div>
@@ -122,19 +131,31 @@
         <div class="btn-group">
             <!-- Shopier -->
             <a href="https://www.shopier.com/hurdogancraft" class="btn-box" target="_blank">
-                <div class="btn btn-shopier">Shopier Mağazamız</div>
+                <div class="btn btn-shopier">
+                    <!-- Shopier logosu sol tarafa yerleşti -->
+                    <img src="https://www.shopier.com/ShowAs/images/shopier-logo-icon.png" alt="Shopier" class="platform-logo">
+                    Shopier Mağazamız
+                </div>
                 <div class="note">*Tarayıcıdan anında açılır, uygulama gerektirmez*</div>
             </a>
 
             <!-- Dolap -->
             <a href="https://dolap.com/profil/hurdogancraft" class="btn-box" target="_blank">
-                <div class="btn btn-dolap">Dolap Mağazamız</div>
+                <div class="btn btn-dolap">
+                    <!-- Dolap logosu sol tarafa yerleşti -->
+                    <img src="https://cdn.dsmcdn.com/dolap/web/logo/dolap-favicon.png" alt="Dolap" class="platform-logo">
+                    Dolap Mağazamız
+                </div>
                 <div class="note">*Dolap uygulamanız varsa buradan alışveriş yapabilirsiniz*</div>
             </a>
 
             <!-- Gardrops -->
             <a href="https://www.gardrops.com/hurdogancraft" class="btn-box" target="_blank">
-                <div class="btn btn-gardrops">Gardrops Mağazamız</div>
+                <div class="btn btn-gardrops">
+                    <!-- Gardrops logosu sol tarafa yerleşti -->
+                    <img src="https://www.gardrops.com/favicon.ico" alt="Gardrops" class="platform-logo">
+                    Gardrops Mağazamız
+                </div>
                 <div class="note">*Gardrops uygulamanız varsa buradan alışveriş yapabilirsiniz*</div>
             </a>
         </div>
