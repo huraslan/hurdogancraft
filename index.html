@@ -7,7 +7,11 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            background: linear-gradient(rgba(240, 240, 245, 0.92), rgba(240, 240, 245, 0.92));
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             margin: 0;
             padding: 0;
             color: #333;
@@ -24,41 +28,32 @@
             max-width: 460px;
             margin: 20px;
             background: #ffffff;
-            padding: 35px 24px;
+            padding: 30px 24px;
             border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             box-sizing: border-box;
         }
-        /* Üst kısımdaki profesyonel marka başlığı alanı */
-        .brand-header {
-            margin-bottom: 25px;
-            border-bottom: 2px solid #f0f0f5;
-            padding-bottom: 20px;
-        }
-        .brand-title {
-            font-size: 24px;
-            font-weight: bold;
-            color: #111;
-            letter-spacing: 1px;
-            margin: 0 0 5px 0;
-        }
-        .brand-subtitle {
-            font-size: 13px;
-            color: #666;
-            font-style: italic;
-            margin: 0;
+        /* Tertemiz ana logo alanı */
+        .logo {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
         .section-title {
             font-size: 16px;
             font-weight: bold;
-            margin: 0 0 5px 0;
+            margin: 10px 0 5px 0;
             color: #222;
             letter-spacing: 0.5px;
         }
         .section-desc {
             font-size: 12px;
             color: #555;
-            margin-bottom: 25px;
+            margin-bottom: 22px;
             line-height: 1.4;
         }
         .btn-group {
@@ -93,12 +88,6 @@
             gap: 12px;
             margin: 0 auto;
         }
-        /* Buton içindeki platform logolarının boyutu ve hizası */
-        .btn img.platform-icon {
-            width: 22px;
-            height: 22px;
-            object-fit: contain;
-        }
         .btn-shopier { background-color: #007bff; }
         .btn-dolap { background-color: #00b259; }
         .btn-gardrops { background-color: #a81c3e; }
@@ -110,7 +99,7 @@
             font-style: italic;
         }
 
-        /* Mobilde tam ekran uyumu için */
+        /* Telefonda tam ekran oturması için özel mobil ayar */
         @media (max-width: 480px) {
             body {
                 justify-content: center;
@@ -132,11 +121,8 @@
 </head>
 <body>
     <div class="container">
-        <!-- O karmaşık üst resim kaldırıldı, yerine tertemiz kurumsal başlık getirildi -->
-        <div class="brand-header">
-            <h1 class="brand-title">HÜRDOĞAN CRAFT</h1>
-            <p class="brand-subtitle">Handmade Paracord Gear</p>
-        </div>
+        <!-- Senin attığın yeni ve net logo dosya adı -->
+        <img src="hurdogancraft_logo.jpeg" alt="Hürdoğan Craft Logo" class="logo">
         
         <div class="section-title">SATIŞ PLATFORMLARIMIZ</div>
         <div class="section-desc">El yapımı paracord ürünlerimizi aşağıdaki güvenilir mağazalardan güvenle satın alabilirsiniz.</div>
@@ -146,7 +132,6 @@
             <a href="https://www.shopier.com/hurdogancraft" class="btn-box" target="_blank">
                 <div class="btn btn-shopier">
                     <div class="btn-content">
-                        <!-- Şeffaf ve temiz Shopier simgesi -->
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                         <span>Shopier Mağazamız</span>
                     </div>
@@ -158,7 +143,6 @@
             <a href="https://dolap.com/profil/hurdogancraft" class="btn-box" target="_blank">
                 <div class="btn btn-dolap">
                     <div class="btn-content">
-                        <!-- Şeffaf ve temiz Dolap askı simgesi -->
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4m0 0a3 3 0 103 3H9a3 3 0 103-3zM3 20h18l-2-9H5l-2 9z"/></svg>
                         <span>Dolap Mağazamız</span>
                     </div>
@@ -170,7 +154,6 @@
             <a href="https://www.gardrops.com/hurdogancraft" class="btn-box" target="_blank">
                 <div class="btn btn-gardrops">
                     <div class="btn-content">
-                        <!-- Şeffaf ve temiz Gardrops çanta/mağaza simgesi -->
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg>
                         <span>Gardrops Mağazamız</span>
                     </div>
