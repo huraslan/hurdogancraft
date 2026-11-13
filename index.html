@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hürdoğan Craft | Handmade Paracord Gear</title>
     <style>
-        /* BİLGİSAYAR (PC) GÖRÜNÜMÜ: Yeni geniş açılı arka planımız (pcarkaplan.jpg) ve ortada şık kart */
+        /* HEM PC HEM MOBİL: Manzara arka planı her yerde aktif, üstünde şık puslu efekt */
         body {
             font-family: Arial, sans-serif;
             background-color: #1a1a1a;
@@ -26,12 +26,25 @@
             box-sizing: border-box;
         }
 
+        /* Arka planın üzerine hafif bir karartma/pus efekti vererek yazıları okunur kılıyoruz */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.35); /* Hafif karartma pusluluk */
+            z-index: -1;
+        }
+
         .container {
             width: 100%;
             max-width: 480px;
             margin: 20px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.92); /* Mobilde ve PC'de yazılar net okunsun diye hafif şeffaf buzlu cam */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             padding: 35px 25px;
             border-radius: 20px;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
@@ -111,24 +124,11 @@
             font-style: italic;
         }
 
-        /* MOBİL GÖRÜNÜM: Mobilde arka plan kalkar, temiz mobil logo akar */
-        @media (max-width: 580px) {
-            body {
-                background: #ffffff;
-                background-image: none;
-                justify-content: center;
-            }
+        /* Küçük telefon ekranları için ufak boşluk ayarı */
+        @media (max-width: 480px) {
             .container {
-                max-width: 100%;
-                margin: 0;
-                padding: 24px 16px;
-                border-radius: 0;
-                box-shadow: none;
-                background: #ffffff;
-                min-height: 100vh;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
+                margin: 12px;
+                padding: 25px 18px;
             }
         }
     </style>
