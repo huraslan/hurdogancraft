@@ -3,70 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hürdoğan Outdoor / Shop</title>
+    <title>Hürdoğan Craft | Handmade Paracord Gear</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
+            margin: 0;
+            padding: 15px;
             color: #333;
             text-align: center;
-            padding: 50px;
-            margin: 0;
         }
         .container {
-            max-width: 500px;
+            max-width: 480px;
             margin: 0 auto;
-            background: #fff;
-            padding: 30px;
+            background: #fdfdfd;
+            padding: 20px;
             border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
-        h1 {
-            font-size: 24px;
-            margin-bottom: 10px;
+        .logo {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 15px auto;
+            border-radius: 8px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0 5px 0;
             color: #111;
+            letter-spacing: 0.5px;
         }
-        p {
-            color: #666;
-            margin-bottom: 30px;
+        .section-desc {
+            font-size: 12px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.4;
         }
-        .btn-container {
+        .btn-group {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 14px;
+        }
+        .btn-box {
+            display: block;
+            text-decoration: none;
         }
         .btn {
             display: block;
-            background-color: #2563eb;
-            color: white;
-            padding: 12px 20px;
+            padding: 14px 20px;
             border-radius: 8px;
-            text-decoration: none;
             font-weight: bold;
-            transition: background 0.2s;
+            font-size: 16px;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
         }
-        .btn:hover {
-            background-color: #1d4ed8;
+        .btn-shopier { background-color: #007bff; }
+        .btn-dolap { background-color: #00b259; }
+        .btn-gardrops { background-color: #a81c3e; }
+        
+        .note {
+            font-size: 11px;
+            color: #666;
+            margin-top: 4px;
+            font-style: italic;
         }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <h1>Hürdoğan Outdoor</h1>
-        <p>Mağaza ve platform bağlantılarımız</p>
+        <!-- Orijinal görsel dosya adın -->
+        <img src="arka_plan_plan.jpg" alt="Hürdoğan Craft Logo" class="logo">
         
-        <div class="btn-container">
-            <!-- Shopier Butonu -->
-            <a href="https://www.shopier.com/hurdogancraft" class="btn" target="_blank">Shopier Mağazası</a>
-            
-            <!-- Gardrops Butonu -->
-            <a href="https://www.gardrops.com/hurdogancraft" class="btn" target="_blank">Gardrops Mağazası</a>
-            
-            <!-- Dolap Butonu -->
-            <a href="https://link.dolap.com/hyccwhri" class="btn" target="_blank">Dolap Mağazası</a>
+        <div class="section-title">SATIŞ PLATFORMLARIMIZ</div>
+        <div class="section-desc">El yapımı paracord ürünlerimizi aşağıdaki güvenilir mağazalardan güvenle satın alabilirsiniz.</div>
+
+        <div class="btn-group">
+            <!-- Shopier -->
+            <a href="https://www.shopier.com/hurdogancraft" class="btn-box" target="_blank">
+                <div class="btn btn-shopier">Shopier Mağazamız</div>
+                <div class="note">*Tarayıcıdan anında açılır, uygulama gerektirmez*</div>
+            </a>
+
+            <!-- Dolap (Bunu istediğin zaman değiştirebilirsin) -->
+            <a href="https://link.dolap.com/hyccwhri" class="btn-box" target="_blank">
+                <div class="btn btn-dolap">Dolap Mağazamız</div>
+                <div class="note">*Dolap uygulamanız varsa buradan alışveriş yapabilirsiniz*</div>
+            </a>
+
+            <!-- Gardrops -->
+            <a href="https://www.gardrops.com/hurdogancraft" class="btn-box" target="_blank">
+                <div class="btn btn-gardrops">Gardrops Mağazamız</div>
+                <div class="note">*Gardrops uygulamanız varsa buradan alışveriş yapabilirsiniz*</div>
+            </a>
         </div>
     </div>
-
 </body>
 </html>
