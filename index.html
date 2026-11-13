@@ -26,7 +26,7 @@
             box-sizing: border-box;
         }
 
-        /* Arka planın üzerine genel bir hafif karartma */
+        /* Arka planın üzerine genel hafif karartma */
         body::before {
             content: "";
             position: fixed;
@@ -34,21 +34,21 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.35);
             z-index: -1;
         }
 
-        /* BEYAZ KART: İstediğin gibi arkadaki manzarayı hafifçe içeri sızdıran yarı şeffaf buzlu beyaz tonu */
+        /* KART: Arka planı kesinlikle yarı şeffaf yaptık ki manzara içinden süzülsün */
         .container {
             width: 100%;
             max-width: 480px;
             margin: 20px;
-            background: rgba(255, 255, 255, 0.88); /* Hafif şeffaf beyaz - arkadaki manzara içinden hafifçe puslu görünür */
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.82) !important; /* Katı beyazlığı kırdık, arkadaki manzara içeri sızacak */
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
             padding: 35px 25px;
             border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
             box-sizing: border-box;
         }
 
@@ -72,7 +72,7 @@
 
         .section-desc {
             font-size: 13px;
-            color: #555;
+            color: #444;
             margin-bottom: 25px;
             line-height: 1.5;
         }
@@ -120,7 +120,7 @@
         
         .note {
             font-size: 11px;
-            color: #555;
+            color: #444;
             margin-top: 5px;
             font-style: italic;
         }
