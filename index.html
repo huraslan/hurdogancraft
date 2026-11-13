@@ -7,11 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(rgba(240, 240, 245, 0.92), rgba(240, 240, 245, 0.92));
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            background: linear-gradient(135deg, #f0f2f5 0%, #e4e8ef 100%);
             margin: 0;
             padding: 0;
             color: #333;
@@ -25,12 +21,13 @@
         }
         .container {
             width: 100%;
-            max-width: 460px;
+            /* Bilgisayarda çok küçük kalmaması, ideal ve şık durması için genişliği biraz artırdık */
+            max-width: 540px;
             margin: 20px;
             background: #ffffff;
-            padding: 30px 24px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px 35px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
             box-sizing: border-box;
         }
         /* Logo alanı */
@@ -39,27 +36,27 @@
             max-width: 100%;
             height: auto;
             display: block;
-            margin: 0 auto 20px auto;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            margin: 0 auto 25px auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
         }
         .section-title {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
-            margin: 10px 0 5px 0;
-            color: #222;
+            margin: 15px 0 8px 0;
+            color: #1a1a1a;
             letter-spacing: 0.5px;
         }
         .section-desc {
-            font-size: 12px;
+            font-size: 13px;
             color: #555;
-            margin-bottom: 22px;
-            line-height: 1.4;
+            margin-bottom: 28px;
+            line-height: 1.5;
         }
         .btn-group {
             display: flex;
             flex-direction: column;
-            gap: 14px;
+            gap: 16px;
             width: 100%;
         }
         .btn-box {
@@ -70,12 +67,12 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 14px 20px;
-            border-radius: 10px;
+            padding: 16px 24px;
+            border-radius: 12px;
             font-weight: bold;
-            font-size: 15px;
+            font-size: 16px;
             color: white;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             transition: transform 0.2s ease, opacity 0.2s ease;
         }
         .btn:hover {
@@ -85,7 +82,7 @@
         .btn-content {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
             margin: 0 auto;
         }
         .btn-shopier { background-color: #007bff; }
@@ -95,12 +92,12 @@
         .note {
             font-size: 11px;
             color: #666;
-            margin-top: 5px;
+            margin-top: 6px;
             font-style: italic;
         }
 
-        /* Mobilde tam ekran uyumu */
-        @media (max-width: 480px) {
+        /* Telefonda tam ekran oturması için mobil kuralı */
+        @media (max-width: 580px) {
             body {
                 justify-content: center;
                 background: #ffffff;
@@ -121,7 +118,7 @@
 </head>
 <body>
     <div class="container">
-        <!-- GitHub'daki depo dosya adıyla birebir eşleştirildi: hurdogancraft_logo.jpeg -->
+        <!-- Logomuz -->
         <img src="hurdogancraft_logo.jpeg" alt="Hürdoğan Craft Logo" class="logo">
         
         <div class="section-title">SATIŞ PLATFORMLARIMIZ</div>
