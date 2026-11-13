@@ -7,49 +7,53 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            /* Bilgisayarda ve telefonda arka planı şık bir tonla kaplıyoruz, sağda solda boşluk kalmıyor */
+            background: linear-gradient(rgba(240, 240, 245, 0.92), rgba(240, 240, 245, 0.92)), url('arka-plan.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             margin: 0;
-            padding: 0; /* Mobildeki dış boşluklar sıfırlandı, tam ekran oturur */
+            padding: 0;
             color: #333;
             text-align: center;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Dikeyde ekranı ortalar ve boşlukları dengeler */
+            justify-content: center;
+            align-items: center;
             box-sizing: border-box;
         }
         .container {
             width: 100%;
-            max-width: 480px;
-            margin: 0 auto;
-            background: #fdfdfd;
-            padding: 24px 16px;
-            border-radius: 0; /* Mobilde uçtan uca oturması için köşe kısımları düzlendi */
-            box-shadow: none;
+            max-width: 460px;
+            margin: 20px;
+            background: #ffffff;
+            padding: 30px 24px;
+            border-radius: 16px;
+            /* Bilgisayarda sırıtmaması için modern, hafif bir gölge ve şık çerçeve ekledik */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
             box-sizing: border-box;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
         }
         .logo {
             max-width: 100%;
             height: auto;
             display: block;
-            margin: 0 auto 15px auto;
-            border-radius: 8px;
+            margin: 0 auto 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
         }
         .section-title {
             font-size: 18px;
             font-weight: bold;
-            margin: 20px 0 5px 0;
+            margin: 15px 0 6px 0;
             color: #111;
             letter-spacing: 0.5px;
         }
         .section-desc {
             font-size: 12px;
             color: #555;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
             line-height: 1.4;
         }
         .btn-group {
@@ -70,6 +74,11 @@
             font-size: 16px;
             color: white;
             box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+        .btn:hover {
+            opacity: 0.92;
+            transform: translateY(-2px);
         }
         .btn-shopier { background-color: #007bff; }
         .btn-dolap { background-color: #00b259; }
@@ -78,14 +87,33 @@
         .note {
             font-size: 11px;
             color: #666;
-            margin-top: 4px;
+            margin-top: 5px;
             font-style: italic;
+        }
+
+        /* Telefonda (mobilde) kenar boşluklarını sıfırlayıp tam ekran oturmasını sağlayan özel ayar */
+        @media (max-width: 480px) {
+            body {
+                justify-content: flex-start;
+                background: #ffffff; /* Mobilde direkt arka plan rengiyle tam oturur */
+            }
+            .container {
+                max-width: 100%;
+                margin: 0;
+                padding: 20px 16px;
+                border-radius: 0;
+                box-shadow: none;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- En baştaki gibi orijinal logonuz yerinde duruyor -->
+        <!-- Logon yerinde duruyor -->
         <img src="arka-plan.jpg" alt="Hürdoğan Craft Logo" class="logo">
         
         <div class="section-title">SATIŞ PLATFORMLARIMIZ</div>
