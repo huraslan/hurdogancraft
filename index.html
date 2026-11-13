@@ -7,19 +7,29 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            background-color: #fdfdfd; /* Arka planı içerikle aynı renk yapıp bütünledik */
             margin: 0;
-            padding: 15px;
+            padding: 0; /* Kenar boşlukları tamamen sıfırlandı */
             color: #333;
             text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Dikeyde ortalar ve alt/üst boşluk dengesini sağlar */
         }
         .container {
-            max-width: 480px;
-            margin: 0 auto;
+            width: 100%;
+            max-width: 100%; /* Sınırlama kaldırıldı, ekranı tam kaplar */
+            margin: 0;
             background: #fdfdfd;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            padding: 20px 16px; /* İçerik kenarlara yapışmasın diye güvenli iç boşluk */
+            border-radius: 0; /* Köşeler düzlendi */
+            box-shadow: none; /* Kutlama gölgesi kaldırıldı */
+            box-sizing: border-box;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         .logo {
             max-width: 100%;
@@ -45,6 +55,9 @@
             display: flex;
             flex-direction: column;
             gap: 14px;
+            width: 100%;
+            max-width: 480px; /* Butonlar mobilde çok yayılıp devleşmesin diye max sınır korundu */
+            margin: 0 auto;
         }
         .btn-box {
             display: block;
