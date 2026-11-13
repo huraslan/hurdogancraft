@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
+            background-color: #f4f4f9;
             margin: 0;
             padding: 15px;
             color: #333;
@@ -21,25 +21,13 @@
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
-        /* Logo ve görsellerin mobilde taşmasını kesin olarak önleyen ayar */
-        img, .logo-container img {
-            max-width: 120px;
+        /* Senin orijinal görselin/logon burada tam boyutunda ve düzgün durur */
+        .logo {
+            max-width: 100%;
             height: auto;
             display: block;
             margin: 0 auto 15px auto;
-            border-radius: 50%;
-        }
-        h1 {
-            font-size: 22px;
-            margin: 10px 0 5px 0;
-            color: #111;
-        }
-        .subtitle {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            border-radius: 8px;
         }
         .section-title {
             font-size: 16px;
@@ -47,7 +35,6 @@
             margin: 20px 0 10px 0;
             color: #222;
         }
-        /* Platform Butonları */
         .btn-group {
             display: flex;
             flex-direction: column;
@@ -62,53 +49,46 @@
             font-weight: bold;
             font-size: 16px;
             color: white;
-            transition: opacity 0.2s;
         }
         .btn-shopier { background-color: #0047ff; }
         .btn-dolap { background-color: #00b259; }
         .btn-gardrops { background-color: #a81c3e; }
-        .btn:active { opacity: 0.85; }
         
         /* Uyarı notları */
         .note {
             font-size: 11px;
-            color: #666;
+            color: #555;
             margin-top: 4px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             line-height: 1.3;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Logo veya Fotoğraf Alanı (İstediğin zaman buradaki resim bağlantısını değiştirebilirsin) -->
-        <img src="arka-plan.jpg" alt="Hürdoğan Craft Logo">
-        
-        <h1>HÜRDOĞAN CRAFT</h1>
-        <div class="subtitle">Handmade Paracord Gear</div>
+        <!-- Senin kendi orijinal yüklediğin görsel doğrudan burada görünecek -->
+        <img src="arka-plan.jpg" alt="Hürdoğan Craft Logo" class="logo">
         
         <div class="section-title">SATIŞ PLATFORMLARIMIZ</div>
-        <p style="font-size: 13px; color: #555; margin-bottom: 15px;">
-            El yapımı paracord ürünlerimizi güvenle satın alabileceğiniz resmi mağazalarımız:
+        <p style="font-size: 12px; color: #555; margin-bottom: 15px;">
+            El yapımı paracord ürünlerimizi aşağıdaki güvenilir mağazalardan güvenle satın alabilirsiniz.
         </p>
 
         <div class="btn-group">
-            <!-- Shopier (En Hızlı ve Uygulamasız Alışveriş) -->
+            <!-- Shopier -->
             <div>
                 <a href="BURAYA_SHOPIER_LINKINI_YAZ" class="btn btn-shopier">Shopier Mağazamız</a>
-                <div class="note">Uygulama gerektirmez, tarayıcıdan anında güvenli alışveriş yapabilirsiniz.</div>
+                <div class="note">*Tarayıcıdan anında açılır, uygulama gerektirmez*</div>
             </div>
 
-            <!-- Dolap -->
             <div>
                 <a href="BURAYA_DOLAP_LINKINI_YAZ" class="btn btn-dolap">Dolap Mağazamız</a>
-                <div class="note">Alışveriş için Dolap uygulamasının yüklü olması gerekmektedir.</div>
+                <div class="note">*Dolap uygulamanız varsa buradan alışveriş yapabilir*</div>
             </div>
 
-            <!-- Gardrops -->
             <div>
                 <a href="BURAYA_GARDROPS_LINKINI_YAZ" class="btn btn-gardrops">Gardrops Mağazamız</a>
-                <div class="note">Alışveriş için Gardrops uygulamasının yüklü olması gerekmektedir.</div>
+                <div class="note">*Gardrops uygulamanız varsa buradan alışveriş yapabilir*</div>
             </div>
         </div>
     </div>
