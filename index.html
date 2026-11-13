@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hürdoğan Craft | Handmade Paracord Gear</title>
     <style>
+        /* BİLGİSAYAR (PC) GÖRÜNÜMÜ: Arkada atölye fotoğrafı (unnamed-4.jpg), ortada şık kart */
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #f0f2f5 0%, #e4e8ef 100%);
+            background-image: url('unnamed-4.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             margin: 0;
             padding: 0;
             color: #333;
@@ -19,27 +24,29 @@
             align-items: center;
             box-sizing: border-box;
         }
+
         .container {
             width: 100%;
-            /* Bilgisayarda çok küçük kalmaması, ideal ve şık durması için genişliği biraz artırdık */
-            max-width: 540px;
+            max-width: 480px;
             margin: 20px;
-            background: #ffffff;
-            padding: 40px 35px;
+            background: rgba(255, 255, 255, 0.95); /* Arkadaki atölye hafif hissedilsin diye şık buzlu cam efekti */
+            backdrop-filter: blur(8px);
+            padding: 35px 25px;
             border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
             box-sizing: border-box;
         }
-        /* Logo alanı */
+
         .logo {
             width: 100%;
             max-width: 100%;
             height: auto;
             display: block;
-            margin: 0 auto 25px auto;
+            margin: 0 auto 20px auto;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
+
         .section-title {
             font-size: 18px;
             font-weight: bold;
@@ -47,44 +54,51 @@
             color: #1a1a1a;
             letter-spacing: 0.5px;
         }
+
         .section-desc {
             font-size: 13px;
             color: #555;
-            margin-bottom: 28px;
+            margin-bottom: 25px;
             line-height: 1.5;
         }
+
         .btn-group {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 14px;
             width: 100%;
         }
+
         .btn-box {
             display: block;
             text-decoration: none;
         }
+
         .btn {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 16px 24px;
+            padding: 15px 20px;
             border-radius: 12px;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 15px;
             color: white;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             transition: transform 0.2s ease, opacity 0.2s ease;
         }
+
         .btn:hover {
             opacity: 0.92;
             transform: translateY(-2px);
         }
+
         .btn-content {
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 12px;
             margin: 0 auto;
         }
+
         .btn-shopier { background-color: #007bff; }
         .btn-dolap { background-color: #00b259; }
         .btn-gardrops { background-color: #a81c3e; }
@@ -92,15 +106,15 @@
         .note {
             font-size: 11px;
             color: #666;
-            margin-top: 6px;
+            margin-top: 5px;
             font-style: italic;
         }
 
-        /* Telefonda tam ekran oturması için mobil kuralı */
+        /* MOBİL GÖRÜNÜM: Telefonda arka plan kalkar, sadece temiz mobil logo (hurdogancraft_logo.jpeg) tam ekran akar */
         @media (max-width: 580px) {
             body {
-                justify-content: center;
                 background: #ffffff;
+                justify-content: center;
             }
             .container {
                 max-width: 100%;
@@ -108,6 +122,7 @@
                 padding: 24px 16px;
                 border-radius: 0;
                 box-shadow: none;
+                background: #ffffff;
                 min-height: 100vh;
                 display: flex;
                 flex-direction: column;
@@ -118,7 +133,7 @@
 </head>
 <body>
     <div class="container">
-        <!-- Logomuz -->
+        <!-- Logo (hurdogancraft_logo.jpeg) -->
         <img src="hurdogancraft_logo.jpeg" alt="Hürdoğan Craft Logo" class="logo">
         
         <div class="section-title">SATIŞ PLATFORMLARIMIZ</div>
