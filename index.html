@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hürdoğan Craft | Handmade Paracord Gear</title>
     <style>
-        /* BİLGİSAYAR (PC) GÖRÜNÜMÜ: Arkada atölye fotoğrafı (unnamed-4.jpg), ortada şık kart */
+        /* BİLGİSAYAR (PC) GÖRÜNÜMÜ: Arka planı netleştiren ve devasa zoom'u düzelten ayar */
         body {
             font-family: Arial, sans-serif;
+            background-color: #2b2621; /* Fotoğrafın etrafında boşluk kalırsa şık bir atölye kahvesi tonu uyar */
             background-image: url('unnamed-4.jpg');
-            background-size: cover;
+            /* Resmi ekrana yayarken devasa büyümesini engellemek için boyutu dengeliyoruz */
+            background-size: 1100px auto; 
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -29,11 +31,11 @@
             width: 100%;
             max-width: 480px;
             margin: 20px;
-            background: rgba(255, 255, 255, 0.95); /* Arkadaki atölye hafif hissedilsin diye şık buzlu cam efekti */
+            background: rgba(255, 255, 255, 0.96); /* Kartın arkası net okunsun diye hafif buzlu cam */
             backdrop-filter: blur(8px);
             padding: 35px 25px;
             border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
             box-sizing: border-box;
         }
 
@@ -110,10 +112,11 @@
             font-style: italic;
         }
 
-        /* MOBİL GÖRÜNÜM: Telefonda arka plan kalkar, sadece temiz mobil logo (hurdogancraft_logo.jpeg) tam ekran akar */
+        /* MOBİL GÖRÜNÜM: Telefonda yine tertemiz beyaz ekran ve mobil logo akar */
         @media (max-width: 580px) {
             body {
                 background: #ffffff;
+                background-image: none;
                 justify-content: center;
             }
             .container {
